@@ -1,0 +1,269 @@
+/* ========== Globales ========== */
+:root {
+  --font-alata: "Alata", sans-serif;
+  --font-josefin: "Josefin Sans", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-josefin);
+}
+
+/* body.overflow-h {
+  overflow: hidden;
+} */
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: var(--font-alata);
+}
+
+.headings {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.btn {
+  margin-top: 3rem;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  letter-spacing: 0.4rem;
+  font-family: var(--font-alata);
+  padding: 1rem 5rem;
+}
+
+/* ========== Utilidades ========== */
+.only-desktop {
+  display: none;
+}
+
+.container {
+  margin: 8rem 2.5rem 0 2.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* ========== Header y Hero========== */
+
+.hero-container {
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  height: 90vh;
+  display: grid;
+  grid-template-rows: 3rem 2fr;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation .logo {
+  width: 70%;
+}
+
+.title-container {
+  border: 1px solid #fff;
+  padding: 2.5rem;
+  align-self: center;
+}
+
+.menu-links {
+  display: none;
+  color: #fff;
+  width: 40%;
+}
+
+/* .title-container.d-none {
+  display: none;
+} */
+
+.title-container h1 {
+  color: #fff;
+  font-size: 3.7rem;
+  margin: 0;
+  line-height: 1.1;
+  display: table-caption;
+}
+
+/* ========== Contenido Principal ========== */
+.main-content h2 {
+  margin-top: 3.5rem;
+}
+
+.main-content p {
+  font-size: 1.6rem;
+  color: hsl(0, 0%, 55%);
+  font-family: var(--font-alata);
+  line-height: 1.6;
+}
+
+/* ========== Sección Nuestras Creaciones ========== */
+.creations-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.creation {
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.creation:hover {
+  background-color: hsl(0, 0%, 55%);
+  opacity: 0.5;
+}
+
+.creation img {
+  opacity: 0.7;
+  object-fit: cover;
+  height: 100%;
+}
+
+.creation p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  width: 44%;
+  text-align: left;
+}
+
+.creation:hover p {
+  color: #000;
+}
+
+/* ========== Footer ========== */
+.footer {
+  background-color: #000;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  margin-top: 10rem;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.footer .logo {
+  width: 40%;
+}
+
+.footer a {
+  font-size: 1.4rem;
+}
+
+.footer li {
+  margin-bottom: 2rem;
+}
+
+.socials img {
+  padding: 0 0.7rem;
+}
+
+.copy {
+  font-size: 1.6rem;
+  color: hsl(0, 0%, 55%);
+  margin: 2rem 0 0 0;
+}
+
+/* ========== Media queries ========== */
+@media (min-width: 768px) {
+  .hero-container {
+    background-image: url("../images/desktop/image-hero.jpg");
+    padding: 4rem 9rem;
+  }
+  .menu-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+  }
+  .burger-button {
+    display: none;
+  }
+
+  .title-container {
+    max-width: 42%;
+  }
+
+  .title-container h1 {
+    font-size: 4.4rem;
+    letter-spacing: 0.5rem;
+    display: block;
+  }
+
+  /* .main-content {
+    position: relative;
+  }
+
+  .main-content img {
+    max-width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .main-info {
+    position: absolute;
+    bottom: 0;
+    right: 0rem;
+    z-index: 2;
+  } */
+}
+/* Menu */
+/* .hero-container.show {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: none;
+  background-color: #000;
+  color: #fff;
+  transition: all 1s ease-in-out;
+} */
